@@ -1,8 +1,8 @@
-defmodule NinetyNineLispProblems.Mixfile do
+defmodule NinetyNineElixirProblems.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :ninety_nine_lisp_problems,
+    [app: :ninety_nine_elixir_problems,
      version: "0.0.1",
      elixir: "~> 1.0",
      deps: deps]
