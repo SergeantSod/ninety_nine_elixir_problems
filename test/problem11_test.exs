@@ -1,10 +1,5 @@
+Code.require_file "rle_test_cases.exs", __DIR__
+
 defmodule Problem11.Test do
-  use ExUnit.Case
-
-  import Problem11
-
-  test "adjacent duplicate elements are represented as runs" do
-    assert [{2, :a}, :b, {3, :c}] == rle [:a, :a, :b, :c, :c, :c]
-  end
-
+  use RleTestCases, subject: Problem11
 end
