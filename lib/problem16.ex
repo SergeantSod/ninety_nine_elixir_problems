@@ -7,7 +7,7 @@ defmodule Problem16 do
 
   defp drop_nth_into([], _, _, dropped), do: dropped
 
-  defp drop_nth_into([ h | tail], count, count, dropped) do
+  defp drop_nth_into([ _ | tail], count, count, dropped) do
     drop_nth_into tail, 1, count, dropped
   end
 

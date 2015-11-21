@@ -7,11 +7,11 @@ defmodule Problem15 do
 
   defp replicate_into([], replicated, _, _), do: replicated
 
-  defp replicate_into([h | tail], replicated, 0, count) do
+  defp replicate_into([_ | tail], replicated, 0, count) do
     replicate_into tail, replicated, count, count
   end
 
-  defp replicate_into([h | tail]=todo, replicated, current, count) when current > 0 do
+  defp replicate_into([h | _]=todo, replicated, current, count) when current > 0 do
     replicate_into todo, [ h | replicated], current - 1 , count
   end
 end
