@@ -5,14 +5,15 @@ defmodule Problem21 do
   end
 
   defp insert_at_acc(some_list, element, 0, acc) do
-    unacc acc, [element | some_list ]
+    reverse_concat acc, [element | some_list ]
   end
 
   defp insert_at_acc([ fst | rest], element, n, acc) do
     insert_at_acc rest, element, n-1, [fst | acc]
   end
 
-  defp unacc([], tail), do: tail
+  defp reverse_concat([], tail), do: tail
 
-  defp unacc([fst | acc], tail), do: unacc(acc, [fst | tail])
+  defp reverse_concat([fst | acc], tail), do: reverse_concat(acc, [fst | tail])
+
 end
